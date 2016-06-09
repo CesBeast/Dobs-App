@@ -1,0 +1,6 @@
+framework module Pods_Dobs {
+  umbrella header "Pods-Dobs-umbrella.h"
+
+  export *
+  module * { export * }
+}
