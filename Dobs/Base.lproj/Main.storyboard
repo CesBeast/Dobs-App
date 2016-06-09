@@ -37,14 +37,26 @@
                                     <action selector="createAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tLA-ce-QBi"/>
                                 </connections>
                             </button>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="PhI-wD-gEL">
+                                <rect key="frame" x="242" y="332" width="117" height="29"/>
+                                <segments>
+                                    <segment title="Poster"/>
+                                    <segment title="Worker"/>
+                                </segments>
+                                <connections>
+                                    <action selector="posterWorker:" destination="BYZ-38-t0r" eventType="valueChanged" id="2TW-sx-wjV"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="leading" secondItem="axj-e5-qsD" secondAttribute="leading" id="6CX-xB-4wm"/>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="trailing" secondItem="axj-e5-qsD" secondAttribute="trailing" id="7Mr-Ha-0u7"/>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCx-Ol-xaJ"/>
+                            <constraint firstItem="PhI-wD-gEL" firstAttribute="top" secondItem="NDW-IU-Jsl" secondAttribute="bottom" constant="66" id="G4c-c5-gPu"/>
                             <constraint firstItem="axj-e5-qsD" firstAttribute="top" secondItem="WM6-5r-sSW" secondAttribute="bottom" constant="8" symbolic="YES" id="LI2-ch-tuL"/>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="OEf-hB-CXv"/>
+                            <constraint firstItem="PhI-wD-gEL" firstAttribute="centerX" secondItem="NDW-IU-Jsl" secondAttribute="centerX" id="QBe-N6-CLb"/>
                             <constraint firstItem="NDW-IU-Jsl" firstAttribute="top" secondItem="axj-e5-qsD" secondAttribute="bottom" constant="38" id="nNF-NP-E7A"/>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="centerX" secondItem="NDW-IU-Jsl" secondAttribute="centerX" id="qQ8-B3-to0"/>
                         </constraints>
@@ -58,6 +70,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="password" destination="axj-e5-qsD" id="iMo-wQ-0Qb"/>
+                        <outlet property="posterWorkerControl" destination="PhI-wD-gEL" id="CT9-zQ-7xj"/>
                         <outlet property="username" destination="WM6-5r-sSW" id="m55-Zp-Gk1"/>
                     </connections>
                 </viewController>
