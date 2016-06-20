@@ -14,7 +14,10 @@ import Firebase
 class ViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var posterWorkerControl: UISegmentedControl!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var nameTextBox: UITextField!
+   
     
     
     var buttonTitlePressed:String?
@@ -32,16 +35,6 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func posterWorker(sender: AnyObject) {
-        if self.posterWorkerControl.selectedSegmentIndex == 1{ //Person is worker
-            self.isWorker = true
-            
-        }
-        else{
-            self.isWorker = false
-        }
-        
-    }
     @IBAction func cancelLogin(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -95,13 +88,16 @@ class ViewController: UIViewController {
                 isLogin = false
                 print("register")
                 self.navigationController?.topViewController?.title = "Register"
-                self.posterWorkerControl.hidden = false
+                self.loginButton.hidden = true
+                
             }
         }
         else{
             isLogin = true
             print("Login")
             self.navigationController?.topViewController?.title = "Login"
+            self.registerButton.hidden = true
+            self.nameTextBox.hidden = true
             
         }
 
