@@ -14,12 +14,19 @@ import Firebase
 class ViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var nameTextBox: UITextField!
+   
     
-    //test comment
+    
+    var buttonTitlePressed:String?
+    var isLogin: Bool!
+    var isWorker: Bool!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.determineLoginOrRegister()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +39,8 @@ class ViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func createAccount(sender: AnyObject) {
+        
+        
         FIRAuth.auth()?.createUserWithEmail(username.text!, password: password.text!, completion: {
             user,error in
             
@@ -46,6 +55,12 @@ class ViewController: UIViewController {
                 
             }
         })
+    }
+    //Alert Function
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert,animated: true, completion: nil)
     }
     
     func login(){
@@ -63,6 +78,29 @@ class ViewController: UIViewController {
                 print("Logged in")
             }
         })
+
+    }
+    
+    //Sets the title to either Login or Register
+    func determineLoginOrRegister(){
+        if buttonTitlePressed != nil{
+            if buttonTitlePressed == "Register"{
+                isLogin = false
+                print("register")
+                self.navigationController?.topViewController?.title = "Register"
+                self.loginButton.hidden = true
+                
+            }
+        }
+        else{
+            isLogin = true
+            print("Login")
+            self.navigationController?.topViewController?.title = "Login"
+            self.registerButton.hidden = true
+            self.nameTextBox.hidden = true
+            
+        }
+
 
     }
 }
