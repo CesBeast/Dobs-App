@@ -35,6 +35,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="createAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tLA-ce-QBi"/>
+                                    <segue destination="csp-HR-nPV" kind="presentation" id="uOG-rS-BVG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ht3-oz-jV1">
@@ -86,6 +87,24 @@
             </objects>
             <point key="canvasLocation" x="1103" y="446"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="vYI-MS-6rR">
+            <objects>
+                <viewController id="csp-HR-nPV" customClass="HomeViewController" customModule="Dobs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pdA-cl-QAz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ws6-We-Ad8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tXg-86-V77">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuA-3G-nil" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="1128"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="s3c-p8-SXd">
             <objects>
@@ -97,18 +116,7 @@
                     <view key="view" contentMode="scaleToFill" id="yPg-GD-0d9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jenn I Love You!" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cp6-8O-iMe">
-                                <rect key="frame" x="237" y="285" width="126" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Cp6-8O-iMe" firstAttribute="centerY" secondItem="yPg-GD-0d9" secondAttribute="centerY" id="gnm-XM-suZ"/>
-                            <constraint firstItem="Cp6-8O-iMe" firstAttribute="centerX" secondItem="yPg-GD-0d9" secondAttribute="centerX" id="yjJ-oZ-fhO"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDn-cl-fyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
