@@ -46,23 +46,15 @@
                                     <segue destination="qrn-Oy-a4F" kind="show" id="LKr-lt-Sw8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q1N-n1-myU">
-                                <rect key="frame" x="209" y="150" width="183" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="leading" secondItem="axj-e5-qsD" secondAttribute="leading" id="6CX-xB-4wm"/>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="trailing" secondItem="axj-e5-qsD" secondAttribute="trailing" id="7Mr-Ha-0u7"/>
-                            <constraint firstItem="WM6-5r-sSW" firstAttribute="top" secondItem="q1N-n1-myU" secondAttribute="bottom" constant="8" symbolic="YES" id="7Z7-z6-ndw"/>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCx-Ol-xaJ"/>
-                            <constraint firstItem="q1N-n1-myU" firstAttribute="trailing" secondItem="WM6-5r-sSW" secondAttribute="trailing" id="DPn-uR-6Bz"/>
                             <constraint firstItem="ht3-oz-jV1" firstAttribute="top" secondItem="NDW-IU-Jsl" secondAttribute="bottom" constant="3" id="IhQ-Rb-lFI"/>
                             <constraint firstItem="axj-e5-qsD" firstAttribute="top" secondItem="WM6-5r-sSW" secondAttribute="bottom" constant="8" symbolic="YES" id="LI2-ch-tuL"/>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="OEf-hB-CXv"/>
-                            <constraint firstItem="q1N-n1-myU" firstAttribute="leading" secondItem="WM6-5r-sSW" secondAttribute="leading" id="gXQ-4S-aq6"/>
                             <constraint firstItem="ht3-oz-jV1" firstAttribute="centerX" secondItem="NDW-IU-Jsl" secondAttribute="centerX" id="iKS-1y-Jhq"/>
                             <constraint firstItem="NDW-IU-Jsl" firstAttribute="top" secondItem="axj-e5-qsD" secondAttribute="bottom" constant="38" id="nNF-NP-E7A"/>
                             <constraint firstItem="WM6-5r-sSW" firstAttribute="centerX" secondItem="NDW-IU-Jsl" secondAttribute="centerX" id="qQ8-B3-to0"/>
@@ -77,7 +69,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="loginButton" destination="NDW-IU-Jsl" id="VSr-BG-0PG"/>
-                        <outlet property="nameTextBox" destination="q1N-n1-myU" id="XVr-Xy-bMA"/>
                         <outlet property="password" destination="axj-e5-qsD" id="iMo-wQ-0Qb"/>
                         <outlet property="registerButton" destination="ht3-oz-jV1" id="KkA-4b-YaH"/>
                         <outlet property="username" destination="WM6-5r-sSW" id="m55-Zp-Gk1"/>
@@ -116,6 +107,13 @@
                     <view key="view" contentMode="scaleToFill" id="yPg-GD-0d9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7OE-s6-ugt">
+                                <rect key="frame" x="252" y="160" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

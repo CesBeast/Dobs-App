@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, SideBarDelegate {
         
         super.viewDidLoad()
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["First Item","Second Item","Third Item"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["Home","Tasks","My Tasks"])
         sideBar.delegate = self
 
         // Do any additional setup after loading the view.
